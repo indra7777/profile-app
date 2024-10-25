@@ -1,9 +1,6 @@
-import Fastify from "fastify";
-import knex from "knex";
-import dotenv from "dotenv";
-
-dotenv.config();
-const server = Fastify({ logger: true });
+const server = require("fastify")({ logger: true });
+const knex = require("knex");
+require("dotenv").config();
 
 // MySQL database connection using Knex
 const db = knex({
